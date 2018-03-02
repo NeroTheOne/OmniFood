@@ -69,7 +69,7 @@ h3 {
   margin-bottom: 15px;
 }
 
-h2:after {
+.section-features h2:after {
   display: block;
   background-color: #e67e22;
   height: 2px;
@@ -184,15 +184,24 @@ header {
 
 .hero-text-box {
   position: absolute;
-  width: 1440px;
+  width: 1200px;
   top: 50%;
   left: 50%;
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* ------------------------------------------------------------ */
+/* FEATURES SECTION */
+/* ------------------------------------------------------------ */
+
+.section-features .long-copy {
+  margin-bottom: 30px;
 }
 
 /* ------------------------------------------------------------ */
 /* MEALS SECTION */
 /* ------------------------------------------------------------ */
+
 .section-meals {
   padding: 0px;
 }
@@ -209,11 +218,21 @@ header {
 }
 
 .meal-photo {
+  overflow: hidden;
+  background-color: #000;
   width: 100%;
   margin: 0;
 }
 
 .meal-photo img {
+  transform: scale(1.03);
+  opacity: 0.7;
   width: 100%;
   height: auto;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+  transform: scale(1.15);
+  opacity: 1;
 }
