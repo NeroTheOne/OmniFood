@@ -10,6 +10,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname + '/public')));
 
 hps.registerPartials(__dirname + 'views/partials');
+console.log('PARTIALS-PATH:', __dirname + '/views/partials');
 
 app.get('/', (req, res) => {
   res.render('index');
